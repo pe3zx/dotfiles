@@ -8,7 +8,8 @@ plugins=(git common-aliases docker git-extras)
 source $ZSH/oh-my-zsh.sh
 
 alias upgrade='sudo apt update; sudo apt upgrade -y; sudo apt dist-upgrade -y'
-# alias clean='sudo bleachbit -c --preset'
+alias clean='bleachbit --list | grep -E "[a-z]+\.[a-z]+" | xargs bleachbit -c'
+alias sclean='sudo bleachbit --list | grep -E "[a-z]+\.[a-z]+" | xargs bleachbit -c'
 # alias mg='sudo vmhgfs-fuse .host:/ <mount-point> -o subtype=vmhgfs-fuse,allow_other'
 # alias gssh='eval $(ssh-agent -s); ssh-add <key>'
 
