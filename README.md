@@ -23,9 +23,10 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 
 # Deploy dotfiles
 git clone --separate-git-dir=$HOME/.dotfiles https://github.com/pe3zx/dotfiles.git $HOME/.dotfiles-tmp
-cp ~/.dotfiles-tmp/.gitmodules
+cp ~/.dotfiles-tmp/.gitmodules ~
 rm -r ~/.dotfiles-tmp
 alias dt='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+dt submodule update --init --recursive
 ```
 
 ## Inside dotfiles
