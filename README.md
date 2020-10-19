@@ -37,3 +37,8 @@ The repo contains:
     - The vim config has `rcnp.vim` for no-plugin version and can be configured with `ln -s ~/.vim/rcnp.vim ~/.vimrc`
 - `.zshrc` for [ohmyzsh/ohmyzsh](https://github.com/ohmyzsh/ohmyzsh)
 - `.tmux` from [gpakosz/.tmux](https://github.com/gpakosz/.tmux)
+    - Run `ln -s -f .tmux/.tmux.conf` and `cp .tmux/.tmux.conf.local .` after clone
+    
+## TODO
+
+- [ ] Install Vundle
