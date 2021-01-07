@@ -27,6 +27,11 @@ cp ~/.dotfiles-tmp/.gitmodules ~
 rm -r ~/.dotfiles-tmp
 alias dt='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 dt submodule update --init --recursive
+mv zshrc ~/.zshrc
+source ~/.zshrc
+ln -s ~/.vim/rcnp.vim ~/.vimrc
+ln -s -f .tmux/.tmux.conf
+cp .tmux/.tmux.conf.local .
 ```
 
 ## Inside dotfiles
