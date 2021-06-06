@@ -1,55 +1,19 @@
 " ===========================================================
-" Load required dependencies
-" ===========================================================
-
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'godlygeek/tabular'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'mattn/emmet-vim'
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'PProvost/vim-ps1'
-Plugin 'easymotion/vim-easymotion'
-Plugin 's3rvac/vim-syntax-yara'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'ntpeters/vim-better-whitespace'
-Plugin 'tpope/vim-surround'
-Plugin 'SidOfc/mkdx'
-Plugin 'mzlogin/vim-markdown-toc'
-Plugin 'junegunn/fzf'
-Plugin 'junegunn/fzf.vim'
-Plugin 'itchyny/lightline.vim'
-Plugin 'Anthirian/vim-aggressor'
-Plugin 'vim-syntastic/syntastic'
-Plugin 'preservim/nerdtree'
-Plugin 'tomlion/vim-solidity'
-Plugin 'cespare/vim-toml'
-Plugin 'marciomazza/vim-brogrammer-theme'
-Plugin 'chr4/nginx.vim'
-
-call vundle#end()
-
-
-" ===========================================================
 " General configuration
 " ===========================================================
 
 " Hardcore mode
-" map <up> <nop>
-" map <down> <nop>
-" map <left> <nop>
-" map <right> <nop>
-" imap <up> <nop>
-" imap <down> <nop>
-" imap <left> <nop>
-" imap <right> <nop>
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
+imap <up> <nop>
+imap <down> <nop>
+imap <left> <nop>
+imap <right> <nop>
 
 " Specify colorscheme here
-colorscheme brogrammer
+colorscheme torte
 
 " Enable syntax highlighting
 syntax on
@@ -144,35 +108,9 @@ inoremap <C-l> <C-x><C-l>
 " Plugins configuration
 " ===========================================================
 
-" ctrlpvim/ctrlp.vim
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-let g:ctrlp_working_path_mode = 'ra'
-
-" junegunn/fzf
-set rtp+=/usr/bin/fzf
-
-" vim-syntastic/syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-
-" vim-syntastic/syntastic
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
-let g:syntastic_python_checkers=['flake8']
+" let g:ctrlp_map = '<c-p>'
+" let g:ctrlp_cmd = 'CtrlP'
+" let g:ctrlp_working_path_mode = 'ra'
 
 " ===========================================================
 " Filetype configuration
@@ -216,11 +154,4 @@ function! DoPrettyXML()
 endfunction
 command! PrettyXML call DoPrettyXML()
 
-" YARA
-autocmd BufNewFile,BufRead *.yar,*.yara setlocal filetype=yara
 
-" Markdown
-let g:vim_markdown_folding_level = 1
-let g:vim_markdown_math = 1
-let g:vim_markdown_frontmatter = 1
-let g:mkdx#settings = { 'highlight': { 'enable': 1 }, 'enter': { 'shift': 1 }, 'links': { 'external': { 'enable': 1 } }, 'toc': { 'text': 'Table of Contents', 'update_on_write': 1 }, 'fold': { 'enable': 1 } }
