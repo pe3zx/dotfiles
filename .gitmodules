@@ -1,6 +1,6 @@
 [submodule ".vim"]
 	path = .vim
-	url = https://github.com/pe3zx/vimrc.git
+	url = git@github.com:pe3zx/vimrc.git
 [submodule ".tmux"]
 	path = .tmux
 	url = https://github.com/gpakosz/.tmux
